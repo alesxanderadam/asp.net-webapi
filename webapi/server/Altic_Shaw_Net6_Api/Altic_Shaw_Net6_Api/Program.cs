@@ -1,5 +1,6 @@
 using Altic_Shaw_Net6_Api.Entities;
-using Altic_Shaw_Net6_Api.Repositories;
+using Altic_Shaw_Net6_Api.Repositories.Categories;
+using Altic_Shaw_Net6_Api.Repositories.Products;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<AlaticShawContext>(options => options.UseSqlServer
 builder.Services.AddAutoMapper(typeof(Program));
 //Lift cycle DI: AddSingleton(),AddTransient(), AddScoped();
 builder.Services.AddScoped<IProductRepository,  ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 

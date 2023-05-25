@@ -1,4 +1,4 @@
-﻿using Altic_Shaw_Net6_Api.Repositories;
+﻿using Altic_Shaw_Net6_Api.Repositories.Products;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

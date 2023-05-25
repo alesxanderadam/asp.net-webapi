@@ -9,6 +9,7 @@ namespace Altic_Shaw_Net6_Api.Helper
         public ApplicationMapper()
         {
             CreateMap<Product, ProductModel>().ReverseMap();
+            CreateMap<Category, CategoryModel>().ReverseMap();
         }
     }   
 }

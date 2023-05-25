@@ -1,6 +1,6 @@
 ﻿using Altic_Shaw_Net6_Api.Models;
 
-namespace Altic_Shaw_Net6_Api.Repositories
+namespace Altic_Shaw_Net6_Api.Repositories.Products
 {
     public interface IProductRepository
     {

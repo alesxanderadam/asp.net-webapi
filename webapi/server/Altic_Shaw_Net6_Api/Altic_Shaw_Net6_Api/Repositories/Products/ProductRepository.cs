@@ -3,7 +3,7 @@ using Altic_Shaw_Net6_Api.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
-namespace Altic_Shaw_Net6_Api.Repositories
+namespace Altic_Shaw_Net6_Api.Repositories.Products
 {
     public class ProductRepository : IProductRepository
     {
@@ -19,7 +19,7 @@ namespace Altic_Shaw_Net6_Api.Repositories
         public async Task<int> deleteProductAsync(int productId)
         {
             var deleteProduct = _alaticShawContext.Products!.SingleOrDefault(p => p.Id == productId);
-            if(deleteProduct != null)
+            if (deleteProduct != null)
             {
                 _alaticShawContext.Products.Remove(deleteProduct);
                 await _alaticShawContext.SaveChangesAsync();
@@ -54,7 +54,7 @@ namespace Altic_Shaw_Net6_Api.Repositories
 
         public async Task updateProductAsync(int productId, ProductModel product)
         {
-            if(productId == product.Id)
+            if (productId == product.Id)
             {
                 var updateProduct = _mapper.Map<Product>(product);
                 _alaticShawContext.Products!.Update(updateProduct);
